@@ -11,7 +11,7 @@ const Card = ({ item }) => {
     >
       <Image src={item.image} w="150px" h="200px" my="20px" />
 
-      {isHover && <Text>{item.title}</Text>}
+      {isHover && <Text color="white">{item.title}</Text>}
     </Box>
   );
 };
