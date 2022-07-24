@@ -15,7 +15,7 @@ function App() {
 
   const searchByTitle = async () => {
     const response = await axios.get(
-      `https://imdb-api.com/en/API/Search/k_n8ak49wr/${search}`
+      `https://imdb-api.com/en/API/Search/k_y92dhc90/${search}`
     );
     setSearchData(response.data.results);
   };
@@ -27,10 +27,10 @@ function App() {
 
   const searchInitialData = async (title) => {
     const responseMovies = await axios.get(
-      `https://imdb-api.com/en/API/MostPopularMovies/k_n8ak49wr`
+      `https://imdb-api.com/en/API/MostPopularMovies/k_y92dhc90`
     );
     const responseSeries = await axios.get(
-      `https://imdb-api.com/en/API/MostPopularTVs/k_n8ak49wr`
+      `https://imdb-api.com/en/API/MostPopularTVs/k_y92dhc90`
     );
 
     setMoviesData(responseMovies.data.items);
@@ -55,8 +55,8 @@ function App() {
       {search || (
         <>
           <Banner />
-          <Thumbnails array={moviesData} title="Most Popular Movies" />
-          <Thumbnails array={seriesData} title="Most Popular TV Series" />
+          <Thumbnails array={moviesData} title="Películas más populares" />
+          <Thumbnails array={seriesData} title="Series más populares" />
         </>
       )}
     </Box>
